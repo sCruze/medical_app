@@ -1,0 +1,47 @@
+
+// display: flex
+@mixin displayFlex() {
+  display: -webkit-box; /* Safari, iOS 6 и ранних версиях; Android, старых WebKit */
+  display: -moz-box; /*  Firefox (может и глючить) */
+  display: -ms-flexbox; /*  IE 10 */
+  display: -webkit-flex; /* Chrome 21+ */
+  display: flex; /* Opera 12.1+, Firefox 22+ */
+}
+
+// flex content center
+@mixin flexContentCenter() {
+  align-items: center;
+  justify-content: center;
+}
+
+// flex direction
+@mixin flexDirection($item) {
+  -webkit-flex-direction: $item;
+  -ms-flex-direction: $item;
+  flex-direction: $item;
+}
+
+// btn hover
+@mixin btnHover($color) {
+  background-color: $color;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 20%), 0 4px 20px 0 rgba(0, 0, 0, 10%);
+}
+
+@mixin unselectable() {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+// transition
+@mixin transition($time) {
+  -webkit-transition: all $time ease;
+  -moz-transition: all $time ease;
+  -o-transition: all $time ease;
+  transition: all $time ease;
+}
+

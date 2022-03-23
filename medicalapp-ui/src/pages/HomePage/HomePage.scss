@@ -1,0 +1,7 @@
+@import "../../theme/mixins";
+
+.homePage-container {
+  @include displayFlex();
+  flex-direction: column;
+  position: relative;
+}

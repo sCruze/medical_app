@@ -1,0 +1,25 @@
+@import "../../../theme/mixins";
+
+.header-HomePage-container {
+  height: 100%;
+  overflow: hidden;
+
+  .g-bg-cover {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    @include displayFlex();
+    height: 52rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -4rem;
+    z-index: -10;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .header-HomePage-container {
+    height: 700px;
+  }
+}

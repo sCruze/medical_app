@@ -1,0 +1,2 @@
+.lds-dual-ring{width:70px;height:70px;margin:0 auto;padding:8px;display:flex;align-items:center;justify-content:center}.lds-dual-ring:after{content:" ";display:block;width:34px;height:34px;border-radius:50%;border:6px solid #e3c291;border-color:#e3c291 transparent #e3c291 transparent;animation:lds-dual-ring 1.2s linear infinite}@keyframes lds-dual-ring{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+/*# sourceMappingURL=DualRing.css.map */

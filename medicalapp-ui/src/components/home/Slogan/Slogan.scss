@@ -1,0 +1,48 @@
+@import "../../../theme/mixins";
+
+.slogan-container {
+  margin: 8rem 0 5rem 0;
+  .slogan-title_container {
+    @include displayFlex();
+    @include flexContentCenter();
+    margin-bottom: 2rem;
+    h2 {
+      font-family: Roboto-Regular;
+    }
+  }
+   ul {
+     @include displayFlex();
+     @include flexContentCenter();
+     padding: 0 14rem;
+     flex-wrap: wrap;
+     li {
+       @include displayFlex();
+       height: 10%;
+       flex-direction: column;
+       text-align: left;
+       width: 29%;
+       margin-right: 3rem;
+       margin-top: 3rem;
+
+       .img-container {
+         @include displayFlex();
+         @include flexContentCenter();
+         img {
+           width: 45px;
+           height: 45px;
+         }
+       }
+
+        .slogan-title {
+          font-family: Roboto-Medium;
+          font-size: 15px;
+          padding: 1rem 0 0.5rem 0;
+        }
+
+        .slogan-description {
+          font-family: Roboto-Regular;
+          font-size: 15px;
+        }
+      }
+    }
+}

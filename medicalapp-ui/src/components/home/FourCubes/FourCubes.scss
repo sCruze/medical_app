@@ -1,0 +1,44 @@
+@import "../../../theme/mixins";
+
+.four-cubes-container {
+  @include displayFlex();
+  @include flexContentCenter();
+  z-index: 10;
+  padding: 0 55px;
+  margin-top: 26%;
+
+  .cubes-container {
+    @include displayFlex();
+    @include flexContentCenter();
+    width: 20%;
+    height: 12rem;
+    transition: all .35s ease;
+    cursor: pointer;
+    padding: 40px 30px 70px;
+
+    a {
+      @include displayFlex();
+      max-width: 100%;
+      max-height: 100%;
+      //padding: 40px 30px 70px;
+
+      .item-content {
+        @include displayFlex();
+        @include flexContentCenter();
+        flex-direction: column;
+
+        img {
+          max-width: 2.5rem;
+          margin-bottom: 1.3rem;
+        }
+        h3 {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .cubes-container:hover {
+    box-shadow: 3px 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+  }
+}

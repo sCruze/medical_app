@@ -1,0 +1,31 @@
+@import '../../../theme/mixins';
+
+.statistics-container {
+  .statistics-counter_container {
+    height: 385px;
+    background-repeat: no-repeat;
+    background-position: 0rem -23rem;
+    background-size: 120rem 61rem;
+    @include displayFlex();
+    @include flexContentCenter();
+
+    .statistics-counter_container {
+      @include displayFlex();
+      @include flexContentCenter();
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin-right: 10rem;
+
+      .counter-container {
+        font-family: Roboto-Bold;
+        font-size: 45px;
+      }
+
+      .counter-description_container {
+        font-family: Roboto-Regular;
+        font-size: 16px;
+      }
+    }
+  }
+}
+

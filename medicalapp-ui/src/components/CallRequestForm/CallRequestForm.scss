@@ -1,0 +1,150 @@
+@import "../../theme/mixins";
+
+.call-request-form_container {
+  position: fixed;
+  background-color: #5454549e;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  @include displayFlex();
+  @include flexContentCenter();
+  padding: 0 34.5%;
+
+  .call-request-form-modal_container {
+    width: 100%;
+    //height: 100%;
+    max-height: 690px;
+    background: #f7f7f7;
+    border-bottom: 2px solid #45378d;
+
+    .title-call-request-form_container {
+      @include displayFlex();
+      background-color: #45378d;
+      .title-description_container {
+        color: #fff;
+        padding: 1.2rem;
+        flex-grow: 1;
+        -webkit-flex-grow: 1;
+        h2 {
+          margin-bottom: 0.6rem;
+          font-family: Roboto-Bold;
+          font-size: 19px;
+        }
+        p {
+          color: hsla(0,0%,100%,.6);
+          font-family: Roboto-Regular;
+          font-size: 1em;
+        }
+      }
+      .title-btns_container {
+        @include displayFlex();
+        align-items: center;
+        justify-content: center;
+
+
+        span {
+          display: block;
+          width: 24px;
+          height: 24px;
+          cursor: pointer;
+          border-radius: 50%;
+          opacity: 0.7;
+          @include transition(0.3s);
+          margin-right: 1rem;
+        }
+        .stretch-form-btn {
+          background: url('../../icons/call_request/fullscreen.svg') no-repeat 50% 50%;
+        }
+        .stretch-form-btn:hover {
+          opacity: 1;
+        }
+
+        .close-form-btn {
+          background: url('../../icons/call_request/close-modal.svg') no-repeat 50% 50%;
+        }
+
+        .close-form-btn:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    form {
+      padding: 1.2rem;
+      @include displayFlex();
+      @include flexDirection(column);
+
+      .description-rules {
+        margin-bottom: 1rem;
+        .description-required {
+          font-family: Roboto-Regular;
+          font-size: 14px;
+        }
+      }
+
+      .focus-input {
+        label {
+          top: 0 !important;
+          font-size: .8em !important;
+          //background-color: #f7f7f7 !important;
+          background: linear-gradient(180deg, #f7f7f7, #fff) !important;
+        }
+      }
+
+      .input-field_container {
+        margin-bottom: 1.5rem;
+        position: relative;
+        width: 100%;
+        label {
+          position: absolute;
+          @include transition(0.3s);
+          z-index: 1;
+          left: 15px;
+          top: 50%;
+          margin-top: -10.825px;
+          color: #686868;
+          font-size: .9em;
+          display: inline-block;
+          padding: 0.2em;
+          background: transparent;
+          pointer-events: none;
+          //transition: color .3s,top .3s,font-size .3s;
+        }
+
+        input {
+          outline: none;
+          border: 1px solid #aaa;
+          border-radius: 2px;
+          padding: 13px;
+          font-family: Roboto-Regular;
+          font-size: 13px;
+          font-weight: 400;
+          color: #535353;
+          width: 100%;
+          height: 100%;
+          @include transition(0.3s);
+        }
+
+        textarea {
+          width: 100%;
+          outline: none;
+          padding: 1rem;
+        }
+      }
+
+      .textarea-block {
+        label {
+          top: 20%;
+        }
+      }
+
+      .btn-group {
+        @include displayFlex();
+        justify-content: right;
+        button {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}

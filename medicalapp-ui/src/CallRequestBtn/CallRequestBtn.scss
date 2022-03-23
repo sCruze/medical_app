@@ -1,0 +1,65 @@
+@import "../theme/mixins";
+
+.call-request_container {
+  @include displayFlex();
+  @include flexContentCenter();
+  padding: 2.5rem 0;
+  .call-request-description_container {
+    @include displayFlex();
+    @include flexDirection(column);
+    margin-right: 6rem;
+    color: #fff;
+    h2 {
+      font-family: Roboto-Bold;
+      font-size: 20px;
+    }
+    .call-description {
+      @include displayFlex();
+      font-family: Roboto-Regular;
+      font-size: 17px;
+      color: hsla(0,0%,100%,.85);
+      margin-top: 1rem;
+
+      img {
+        width: 18px;
+        height: 18px;
+        margin-right: 0.8rem;
+      }
+    }
+  }
+
+  button {
+    cursor: pointer;
+    color: #fff;
+    font-family: Roboto-Regular;
+    border-color: #fff;
+    padding: 1rem;
+    border-width: 1px;
+    @include displayFlex();
+    @include transition(0.3s);
+
+    img {
+      width: 17px;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.purple {
+  background-color: #5000cd;
+}
+
+.green {
+  background-color: #63b64b;
+}
+
+.purple-hover {
+  button:hover {
+    background-color: #00b74a;
+    border-color: #00b74a;
+  }
+}
+
+.green-hover:hover {
+
+}

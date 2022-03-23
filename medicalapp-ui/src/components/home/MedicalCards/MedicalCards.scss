@@ -1,0 +1,74 @@
+@import '../../../theme/mixins';
+
+.medical-cards-group_container {
+  @include displayFlex();
+  @include flexDirection(column);
+  @include flexContentCenter();
+  position: relative;
+  padding: 2rem;
+
+  .title-block {
+    width: 100%;
+    @include displayFlex();
+    justify-content: left;
+    position: relative;
+    p {
+      font-family: Roboto-Medium;
+      font-size: 34px;
+      line-height: 2;
+    }
+
+    p:before {
+      content: '';
+      width: 70px;
+      height: 3px;
+      background-color: #62b64e;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  .card-container {
+    @include displayFlex();
+    @include flexContentCenter();
+    @include transition(0.3s);
+    cursor: pointer;
+    .block-ava {
+      max-width: 224px;
+      max-height: 224px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-grow: 1;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .content-medical-cards {
+      @include displayFlex();
+      @include flexDirection(column);
+      width: 40%;
+      .working-position {
+        font-family: Roboto-Regular;
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 5px;
+        color: #686868;
+        display: block;
+      }
+
+      .name-doctor-specialization {
+        font-family: Roboto-Regular;
+        font-size: 16px;
+        margin-top: 5px;
+        display: block;
+      }
+    }
+  }
+
+  .card-container:hover {
+    transform: translateY(-10px);
+  }
+}
+
